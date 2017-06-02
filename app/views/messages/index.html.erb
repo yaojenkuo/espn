@@ -1,1 +1,10 @@
-<h1>ESPN!</h1>
+<% @messages.each do |message| %>
+    <div class="col-md-10 col-md-offset-1">
+        <div>
+            <h2><%= message.title %></h2>
+            <%= link_to "Join Conversation", message, class: "btn-custom" %>
+        </div>
+    </div>
+<% end %>
+
+<%= link_to "Post Message", new_message_path %>
